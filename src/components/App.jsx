@@ -60,16 +60,10 @@ export class App extends Component {
     return (
       <div>
         <h1>Phonebook</h1>
-        <ContactForm onSubmit={this.addContact}></ContactForm>
+        <ContactForm onSubmit={this.addContact} />
         <h2>Contacts</h2>
-        <Filter
-          onChange={this.onFilterChange}
-          value={this.state.filter}
-        ></Filter>
-        <ContactList
-          contacts={contacts}
-          onDelete={this.deleteContact}
-        ></ContactList>
+        <Filter onChange={this.onFilterChange} value={this.state.filter} />
+        <ContactList contacts={contacts} onDelete={this.deleteContact} />
       </div>
     );
   }
